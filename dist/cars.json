@@ -1,0 +1,28 @@
+[
+        {
+        "id":"01",
+        "series":"Ghili轿车系列",
+        "img":"./imgs/101.jpeg",
+        "price":"78.88万RMB起",
+        "adver":"唤醒不羁的自我"
+         },
+
+        {
+        "id":"02",
+        "series":"Levante SUV系列",
+        "img":"./imgs/102.jpeg",
+        "price":"96.18万RMB起",
+        "adver":"探寻天地边界"
+
+        },
+
+        {
+        "id":"03",
+        "series":"Quattroporte",
+        "img":"./imgs/103.jpeg",
+        "price":"140.58万RMB起",
+        "adver":"演绎意式风雅"
+        }
+
+
+]
