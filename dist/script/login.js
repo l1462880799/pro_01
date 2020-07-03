@@ -73,20 +73,19 @@ btn.onclick = function () {
   }
 
   ajax({
-    url: "../login.php",
+    url: "../cars.json",
     type: "get",
     data: {
       user: user.value,
       tel: tel.value
     },
     success: function success(data) {
-      var json = JSON.parse(data);
-      console.log(json);
+      var json1 = JSON.parse(data);
     }
   });
 
-  if (user === "xiaoming" && tel === "88888888") {
-    location.href = '../html/index.html';
+  if (user) {
+    location.href = '../html/cars.html';
   } else {
     alert("提交申请失败，您未有试驾资格");
   }

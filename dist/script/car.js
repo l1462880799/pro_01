@@ -54,24 +54,14 @@ gongju.onmouseover = function () {
 
 gongju.onmouseleave = function () {
   gongju_ex.style.display = "none";
-}; // window.onload= function(){
-//     var mySwiper = new mySwiper('.swiper-container',{
-//         direction:'vertical',
-//         loop:true,
-//         pagination:'.swiper-pagination',
-//         nextButtn:'.swiper-button-next',
-//         preButtn:'.swiper-button-grew',
-//         scrollbar:'.swiper-scrollbar',
-//     })
-// } 轮播图
+}; //工具
 
 
-var num = 1;
-var content = document.querySelector('.content_car');
+var cars = document.querySelector(".cars");
 
 window.onload = function () {
   ajax({
-    url: "../car01.json",
+    url: "../cars.json",
     type: "get",
     success: function success(data) {
       var json = JSON.parse(data);
@@ -82,31 +72,7 @@ window.onload = function () {
         str += "\n            <ul>\n                <h3>".concat(json[a].series, "</h3>\n                <li><a href=\"#\"><img src=\"").concat(json[a].img, "\" alt=\"\"></a></li>\n                <li>\u5EFA\u8BAE\u96F6\u552E\u4EF7\uFF1A").concat(json[a].price, "</li>\n                <li><span>\u4E86\u89E3\u66F4\u591A</span></li>\n                <li><span>\u4E2A\u6027\u5316\u914D\u7F6E</span></li>\n            </ul> ");
       }
 
-      content.innerHTML = str;
+      cars.innerHTML = str;
     }
   });
 };
-
-var mySwiper = new Swiper('.swiper-container', {
-  direction: 'horizontal',
-  // 垂直切换选项
-  loop: true,
-  autoplay: true,
-  //等同于以下设置
-  speed: 2000,
-  // 循环模式选项
-  // 如果需要分页器
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  // 如果需要前进后退按钮
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  } // 如果需要滚动条
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-
-});
